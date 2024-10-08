@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cz/vse/adventura/logika/HraTest.java" afterDir="false" />
+    <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="Základ">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,13 +40,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.HelloApplication.executor": "Run",
     "Application.Start.executor": "Run",
     "JUnit.BatohTest.executor": "Run",
     "JUnit.OdemkniTest.executor": "Run",
     "JUnit.PrikazyTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -70,12 +59,34 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kuba6\IdeaProjects\adventura\src\main\resources\cz\vse\adventura" />
+      <recent name="C:\Users\kuba6\IdeaProjects\adventura\src\main\resources\cz\vse\adventura\main" />
       <recent name="C:\Users\kuba6\IdeaProjects\adventura\src\test\java\cz\vse\adventura\logika\Entity" />
       <recent name="C:\Users\kuba6\IdeaProjects\adventura\src\test\java\cz\vse\adventura\logika" />
       <recent name="C:\Users\kuba6\IdeaProjects\adventura\src\main\java\cz\vse\adventura" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PrikazyTest">
+  <component name="RunManager" selected="Application.Start">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cz.vse.adventura.HelloApplication" />
+      <module name="adventura" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.vse.adventura.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Start" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="cz.vse.adventura.Start" />
+      <module name="adventura" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BatohTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventura" />
       <extension name="coverage">
@@ -121,8 +132,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Start" />
+      <item itemvalue="Application.HelloApplication" />
+      <item itemvalue="JUnit.BatohTest" />
+      <item itemvalue="JUnit.OdemkniTest" />
+      <item itemvalue="JUnit.PrikazyTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="JUnit.PrikazyTest" />
         <item itemvalue="JUnit.OdemkniTest" />
         <item itemvalue="JUnit.BatohTest" />
@@ -144,8 +163,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728390941139</updated>
-      <workItem from="1728390942214" duration="886000" />
+      <workItem from="1728390942214" duration="5222000" />
     </task>
+    <task id="LOCAL-00001" summary="Základ">
+      <option name="closed" value="true" />
+      <created>1728391851446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728391851447</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,5 +181,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Základ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Základ" />
   </component>
 </project>
