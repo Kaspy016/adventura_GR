@@ -6,21 +6,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/*******************************************************************************
- * Testovací třída HraTest slouží ke komplexnímu otestování
- * třídy Hra
- *
- * @autor Jarmila Pavlíčková
- * @verze pro školní rok 2016/2017
- */
+
 public class HraTest {
     private Hra hra1;
 
-    /***************************************************************************
-     * Metoda se provede před spuštěním každé testovací metody. Používá se
-     * k vytvoření tzv. přípravku (fixture), což jsou datové atributy (objekty),
-     * s nimiž budou testovací metody pracovat.
-     */
     @BeforeEach
     public void setUp() {
         hra1 = new Hra();
