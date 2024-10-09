@@ -45,7 +45,7 @@
       <TextArea fx:id="vystup" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3" GridPane.vgrow="NEVER">
          <children>
-            <TextField fx:id="vstup" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="vstup" onAction="#odesliVstup" HBox.hgrow="ALWAYS" />
             <Button onAction="#odesliVstup" mnemonicParsing="false" text="Button">
                <HBox.margin>
                   <Insets left="10.0" />
