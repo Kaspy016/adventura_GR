@@ -5,9 +5,9 @@ import cz.vse.adventura.logika.IHra;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+
+import java.util.Optional;
 
 public class MainController {
 
@@ -38,6 +38,14 @@ public class MainController {
             vystup.appendText(hra.vratEpilog());
             vstup.setDisable(true);
             tlacitkoOdesli.setDisable(true);
+        }
+    }
+
+    public void ukoncitHru(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Jste si jistí, že chcete ukončit hru?");
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.isPresent() && result.get() == ButtonType.OK) {
+            Platform.exit();
         }
     }
 }
