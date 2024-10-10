@@ -38,16 +38,6 @@ public class HerniPlan {
         Vec lano = new Lano("lano",true);
         Vec loucen = new Loucen("loučeň",true);
 
-        //Přidání věcí do místnosti
-        vez.pridejVec(loucen);
-        sklad.pridejVec(lano);
-
-        //Nastavení temných místností
-        temnaChodba.setTemna(true);
-
-        //Nastavení vysokých místností
-        vez.setVysoko(true);
-
         // Přidání zlaťáků do místností
         trezor.pridejZlataky(30);
         zahrada.pridejZlataky(10);
@@ -55,6 +45,7 @@ public class HerniPlan {
         sklad.pridejZlataky(10);
         vez.pridejZlataky(10);
         tajemnaMistnost.pridejZlataky(15);
+
 
         // Vytvoření klíče
         Klic klicBrana = new Klic("červený_klíč");
@@ -66,15 +57,28 @@ public class HerniPlan {
         truhla.pridatKlicMistnosti(klicTruhla);
         tajemnaMistnost.pridatKlicMistnosti(klicTajemnaMistnost);
 
-        //Uzamčení místností
-        brana.zamknout();
-        truhla.zamknout();
-        tajemnaMistnost.zamknout();
+        //Přidání věcí do místnosti
+        vez.pridejVec(loucen);
+        sklad.pridejVec(lano);
 
         // Přidání klíče do místnosti
         zbrojnice.pridejVec(klicTruhla);
         truhla.pridejVec(klicBrana);
         vez.pridejVec(klicTajemnaMistnost);
+
+        /*
+        //Nastavení temných místností
+        temnaChodba.setTemna(true);
+
+        //Nastavení vysokých místností
+        vez.setVysoko(true);
+
+
+        //Uzamčení místností
+        brana.zamknout();
+        truhla.zamknout();
+        tajemnaMistnost.zamknout();
+        */
 
         // Vytvoření nepohyblivých věcí
         Vec hadanka1 = new Vec("hádanka_k_trezoru",false,"Všechno žere, všechno se v něm ztrácí,\n" +

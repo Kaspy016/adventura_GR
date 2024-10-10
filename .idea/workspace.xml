@@ -7,6 +7,7 @@
     <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="Zprovoznění odesílání textu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,6 +174,7 @@
       <workItem from="1728397833559" duration="162000" />
       <workItem from="1728463639127" duration="4270000" />
       <workItem from="1728546594223" duration="591000" />
+      <workItem from="1728547330778" duration="1326000" />
     </task>
     <task id="LOCAL-00001" summary="Základ">
       <option name="closed" value="true" />
