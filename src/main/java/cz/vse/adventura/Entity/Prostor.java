@@ -292,5 +292,10 @@ public class Prostor {
         heslo = "";
     }
 
+    /* Zobrazení východů v panelu */
+    @Override
+    public String toString() {
+        return getNazev();
+    }
 }
 

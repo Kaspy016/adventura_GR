@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="Zprovoznění odesílání textu">
-      <change afterPath="$PROJECT_DIR$/.github-ci.yml" afterDir="false" />
+    <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="Úprava POM pro verzi 1.0.0 a github-ci konfigurace">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Prostor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Prostor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +181,7 @@
       <workItem from="1728547330778" duration="2348000" />
       <workItem from="1728572006107" duration="2619000" />
       <workItem from="1728735929021" duration="2988000" />
-      <workItem from="1728810403796" duration="2620000" />
+      <workItem from="1728810403796" duration="5957000" />
     </task>
     <task id="LOCAL-00001" summary="Základ">
       <option name="closed" value="true" />
@@ -213,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728466957876</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Úprava POM pro verzi 1.0.0 a github-ci konfigurace">
+      <option name="closed" value="true" />
+      <created>1728813242977</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728813242977</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +234,7 @@
     <MESSAGE value="Základ" />
     <MESSAGE value="Konfigurace Start" />
     <MESSAGE value="Zprovoznění odesílání textu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zprovoznění odesílání textu" />
+    <MESSAGE value="Úprava POM pro verzi 1.0.0 a github-ci konfigurace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Úprava POM pro verzi 1.0.0 a github-ci konfigurace" />
   </component>
 </project>
