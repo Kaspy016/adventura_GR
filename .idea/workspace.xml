@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="Úprava POM pro verzi 1.0.0 a github-ci konfigurace">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Pozorovatel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/PredmetPozorovani.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/ZmenaHry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/PredmetPozorovani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/PredmetPozorovani.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Prikazy/PrikazJdi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Prikazy/PrikazJdi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/Hra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/Hra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/IHra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/IHra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -51,6 +56,7 @@
     "Application.HelloApplication.executor": "Run",
     "Application.Start.executor": "Run",
     "JUnit.BatohTest.executor": "Run",
+    "JUnit.HraTest.executor": "Run",
     "JUnit.OdemkniTest.executor": "Run",
     "JUnit.PrikazyTest.executor": "Run",
     "Maven.adventura [clean].executor": "Run",
@@ -70,6 +76,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cz.vse.adventura" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kuba6\IdeaProjects\adventura\src\main\resources\cz\vse\adventura" />
       <recent name="C:\Users\kuba6\IdeaProjects\adventura\src\main\resources\cz\vse\adventura\main" />
@@ -114,6 +123,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HraTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adventura" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.vse.adventura.logika.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cz.vse.adventura.logika" />
+      <option name="MAIN_CLASS_NAME" value="cz.vse.adventura.logika.HraTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OdemkniTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventura" />
       <extension name="coverage">
@@ -147,14 +171,16 @@
     <list>
       <item itemvalue="Application.Start" />
       <item itemvalue="Application.HelloApplication" />
+      <item itemvalue="JUnit.HraTest" />
       <item itemvalue="JUnit.BatohTest" />
       <item itemvalue="JUnit.OdemkniTest" />
       <item itemvalue="JUnit.PrikazyTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="JUnit.HraTest" />
         <item itemvalue="JUnit.PrikazyTest" />
+        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="JUnit.OdemkniTest" />
         <item itemvalue="JUnit.BatohTest" />
       </list>
@@ -182,7 +208,8 @@
       <workItem from="1728547330778" duration="2348000" />
       <workItem from="1728572006107" duration="2619000" />
       <workItem from="1728735929021" duration="2988000" />
-      <workItem from="1728810403796" duration="7459000" />
+      <workItem from="1728810403796" duration="7514000" />
+      <workItem from="1728843980168" duration="6059000" />
     </task>
     <task id="LOCAL-00001" summary="Základ">
       <option name="closed" value="true" />

@@ -7,8 +7,11 @@ import cz.vse.adventura.Entity.Veci.Loucen;
 import cz.vse.adventura.Entity.Veci.Vec;
 import cz.vse.adventura.Pozorovatel;
 import cz.vse.adventura.PredmetPozorovani;
+import cz.vse.adventura.ZmenaHry;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class HerniPlan implements PredmetPozorovani {
@@ -16,13 +19,17 @@ public class HerniPlan implements PredmetPozorovani {
     private Prostor aktualniProstor;
     private Batoh batoh;
     private Mesec mesec;
-    private Set<Pozorovatel> seznamPozorovatelu = new HashSet<>();
+    private Map<ZmenaHry, Set<Pozorovatel>> seznamPozorovatelu = new HashMap<>();
+    private Prostor viteznyProstor;
 
     public HerniPlan() {
         zalozProstoryHry();
         this.batoh = new Batoh (3);
         this.mesec = new Mesec();
         zalozProstoryHry();
+        for(ZmenaHry zmenaHry : ZmenaHry.values()) {
+            seznamPozorovatelu.put(zmenaHry, new HashSet<>());
+        }
     }
 
     // vytvářejí se jednotlivé prostory
@@ -145,13 +152,6 @@ public class HerniPlan implements PredmetPozorovani {
         return aktualniProstor;
     }
 
-    public void setAktualniProstor(Prostor prostor) {
-        aktualniProstor = prostor;
-        for(Pozorovatel pozorovatel : seznamPozorovatelu) {
-            pozorovatel.aktualizuj();
-        }
-    }
-
 
     public Batoh getBatoh() {
         return batoh;
@@ -160,9 +160,24 @@ public class HerniPlan implements PredmetPozorovani {
     public Mesec getMesec() {
         return mesec;
     }
+    
+    public Prostor getViteznyProstor() {
+        return viteznyProstor;
+    }
+
+    public void setAktualniProstor(Prostor prostor) {
+        aktualniProstor = prostor;
+        upozorniPozorovatele(ZmenaHry.ZMENA_MISTNOSTI);
+    }
+
+    private void upozorniPozorovatele(ZmenaHry zmenaHry) {
+        for(Pozorovatel pozorovatel : seznamPozorovatelu.get(zmenaHry)) {
+            pozorovatel.aktualizuj();
+        }
+    }
 
     @Override
-    public void registruj(Pozorovatel pozorovatel) {
-        seznamPozorovatelu.add(pozorovatel);
+    public void registruj(ZmenaHry zmenaHry, Pozorovatel pozorovatel) {
+        seznamPozorovatelu.get(zmenaHry).add(pozorovatel);
     }
 }

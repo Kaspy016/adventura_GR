@@ -1,8 +1,15 @@
 package cz.vse.adventura.logika;
 
 import cz.vse.adventura.Entity.Batoh;
+import cz.vse.adventura.Pozorovatel;
+import cz.vse.adventura.PredmetPozorovani;
 import cz.vse.adventura.Prikazy.*;
+import cz.vse.adventura.ZmenaHry;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 
 public class Hra implements IHra {
@@ -10,6 +17,8 @@ public class Hra implements IHra {
     private HerniPlan herniPlan;
     private boolean konecHry = false;
     private Batoh batoh;
+
+    private Map<ZmenaHry, Set<Pozorovatel>> seznamPozorovatelu = new HashMap<>();
 
     public Hra() {
         herniPlan = new HerniPlan();
@@ -30,6 +39,9 @@ public class Hra implements IHra {
         platnePrikazy.vlozPrikaz(new PrikazOdpoved(herniPlan));
         platnePrikazy.vlozPrikaz(new PrikazHadanka(platnePrikazy));
         platnePrikazy.vlozPrikaz(new PrikazVypisVychody(herniPlan));
+        for(ZmenaHry zmenaHry : ZmenaHry.values()) {
+            seznamPozorovatelu.put(zmenaHry, new HashSet<>());
+        }
     }
 
 
@@ -45,7 +57,7 @@ public class Hra implements IHra {
     
 
     public String vratEpilog() {
-        return "Dík, že jste si zahráli.  Ahoj.";
+        return "Dík, že jste si zahráli.";
     }
     
 
@@ -66,7 +78,10 @@ public class Hra implements IHra {
             IPrikaz prikaz = platnePrikazy.vratPrikaz(slovoPrikazu);
             textKVypsani = prikaz.provedPrikaz(parametry);
             // Zkontrolujeme, zda hráč vstoupil do prostoru "brána"
+
+            /*if (herniPlan.getAktualniProstor() == herniPlan.getViteznyProstor()) {*/
             if (konecHry()) {
+                /* setKonecHry(true); */
                 return "Gratuluji! Utekli jste z hradu s " + herniPlan.getMesec().pocetZlataku() + " zlaťáky.";
             }
         } else {
@@ -79,12 +94,23 @@ public class Hra implements IHra {
 
      public void setKonecHry(boolean konecHry) {
         this.konecHry = konecHry;
+        upozorniPozorovatele(ZmenaHry.KONEC_HRY);
     }
     
 
      public HerniPlan getHerniPlan(){
         return herniPlan;
      }
-    
+
+    private void upozorniPozorovatele(ZmenaHry zmenaHry) {
+        for(Pozorovatel pozorovatel : seznamPozorovatelu.get(zmenaHry)) {
+            pozorovatel.aktualizuj();
+        }
+    }
+
+    @Override
+    public void registruj(ZmenaHry zmenaHry, Pozorovatel pozorovatel) {
+        seznamPozorovatelu.get(zmenaHry).add(pozorovatel);
+    }
 }
 

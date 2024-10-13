@@ -3,7 +3,9 @@
 package cz.vse.adventura.logika;
 
 
-public interface IHra
+import cz.vse.adventura.PredmetPozorovani;
+
+public interface IHra extends PredmetPozorovani
 {
 
     public String vratUvitani();

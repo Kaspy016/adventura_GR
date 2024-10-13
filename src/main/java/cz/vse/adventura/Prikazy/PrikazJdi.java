@@ -5,7 +5,7 @@ import cz.vse.adventura.Entity.Prostor;
 import cz.vse.adventura.logika.HerniPlan;
 
 public class PrikazJdi implements IPrikaz {
-    private static final String NAZEV = "jdi";
+    public static final String NAZEV = "jdi";
     private HerniPlan plan;
 
 
