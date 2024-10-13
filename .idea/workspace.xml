@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="Úprava POM pro verzi 1.0.0 a github-ci konfigurace">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Pozorovatel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/PredmetPozorovani.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Prostor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Prostor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -181,7 +182,7 @@
       <workItem from="1728547330778" duration="2348000" />
       <workItem from="1728572006107" duration="2619000" />
       <workItem from="1728735929021" duration="2988000" />
-      <workItem from="1728810403796" duration="5957000" />
+      <workItem from="1728810403796" duration="7459000" />
     </task>
     <task id="LOCAL-00001" summary="Základ">
       <option name="closed" value="true" />

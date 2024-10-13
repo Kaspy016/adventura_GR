@@ -5,12 +5,18 @@ import cz.vse.adventura.Entity.Veci.Klic;
 import cz.vse.adventura.Entity.Veci.Lano;
 import cz.vse.adventura.Entity.Veci.Loucen;
 import cz.vse.adventura.Entity.Veci.Vec;
+import cz.vse.adventura.Pozorovatel;
+import cz.vse.adventura.PredmetPozorovani;
 
-public class HerniPlan {
+import java.util.HashSet;
+import java.util.Set;
+
+public class HerniPlan implements PredmetPozorovani {
 
     private Prostor aktualniProstor;
     private Batoh batoh;
     private Mesec mesec;
+    private Set<Pozorovatel> seznamPozorovatelu = new HashSet<>();
 
     public HerniPlan() {
         zalozProstoryHry();
@@ -141,6 +147,9 @@ public class HerniPlan {
 
     public void setAktualniProstor(Prostor prostor) {
         aktualniProstor = prostor;
+        for(Pozorovatel pozorovatel : seznamPozorovatelu) {
+            pozorovatel.aktualizuj();
+        }
     }
 
 
@@ -152,4 +161,8 @@ public class HerniPlan {
         return mesec;
     }
 
+    @Override
+    public void registruj(Pozorovatel pozorovatel) {
+        seznamPozorovatelu.add(pozorovatel);
+    }
 }
