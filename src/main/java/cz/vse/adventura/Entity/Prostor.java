@@ -293,9 +293,11 @@ public class Prostor {
     }
 
     /* Zobrazení východů v panelu */
+    /*
     @Override
     public String toString() {
         return getNazev();
     }
+     */
 }
 

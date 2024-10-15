@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="Úprava POM pro verzi 1.0.0 a github-ci konfigurace">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/ZmenaHry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/ListCellProstor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/brána.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/sklad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/sklep.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/sál.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/tajemná_místnost.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/temná_chodba.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/trezor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/truhla.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/tvrz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/věž.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/zahrada.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/zbrojnice.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Prostor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Prostor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/PredmetPozorovani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/PredmetPozorovani.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Prikazy/PrikazJdi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Prikazy/PrikazJdi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/Hra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/Hra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/IHra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/IHra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,9 +32,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,31 +59,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Start.executor": "Run",
-    "JUnit.BatohTest.executor": "Run",
-    "JUnit.HraTest.executor": "Run",
-    "JUnit.OdemkniTest.executor": "Run",
-    "JUnit.PrikazyTest.executor": "Run",
-    "Maven.adventura [clean].executor": "Run",
-    "Maven.adventura [org.openjfx:javafx-maven-plugin:0.0.8:jlink].executor": "Run",
-    "Maven.adventura [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/kuba6/IdeaProjects/adventura/src/main/java/cz/vse/adventura",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Start.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BatohTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HraTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OdemkniTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrikazyTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.adventura [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.adventura [org.openjfx:javafx-maven-plugin:0.0.8:jlink].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.adventura [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/kuba6/IdeaProjects/adventura/src/main/java/cz/vse/adventura&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="cz.vse.adventura" />
@@ -209,7 +218,9 @@
       <workItem from="1728572006107" duration="2619000" />
       <workItem from="1728735929021" duration="2988000" />
       <workItem from="1728810403796" duration="7514000" />
-      <workItem from="1728843980168" duration="6059000" />
+      <workItem from="1728843980168" duration="6155000" />
+      <workItem from="1728893575986" duration="5041000" />
+      <workItem from="1728984173235" duration="3953000" />
     </task>
     <task id="LOCAL-00001" summary="Základ">
       <option name="closed" value="true" />
