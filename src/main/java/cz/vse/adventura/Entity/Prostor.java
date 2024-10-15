@@ -292,12 +292,12 @@ public class Prostor {
         heslo = "";
     }
 
-    /* Zobrazení východů v panelu */
-    /*
-    @Override
-    public String toString() {
-        return getNazev();
+
+    public Set<Vec> getVeci() {
+        return Collections.unmodifiableSet(veci);
     }
-     */
+
+
+
 }
 

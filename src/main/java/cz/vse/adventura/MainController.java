@@ -29,6 +29,8 @@ public class MainController {
     @FXML
     private ListView<Vec> panelVeci;
     @FXML
+    private ListView<Vec> panelProstoru;
+    @FXML
     private TextArea vystup;
     @FXML
     private Button tlacitkoOdesli;
@@ -38,6 +40,8 @@ public class MainController {
 
     private ObservableList<Prostor> seznamVychodu = FXCollections.observableArrayList();
     private ObservableList<Vec> seznamVeciVBatohu = FXCollections.observableArrayList();
+    private ObservableList<Vec> seznamVeciVProstoru = FXCollections.observableArrayList();
+
 
 
     private Map<String, Point2D> souradniceProstoru = new HashMap<>();
@@ -49,6 +53,7 @@ public class MainController {
         Platform.runLater(() -> vstup.requestFocus());
         panelVychodu.setItems(seznamVychodu);
         panelVeci.setItems(seznamVeciVBatohu);
+        panelProstoru.setItems(seznamVeciVProstoru);
         hra.getHerniPlan().registruj(ZmenaHry.ZMENA_MISTNOSTI, () -> {
             aktualizujSeznamVychodu();
             aktualizujPolohuHrace();
@@ -69,6 +74,19 @@ public class MainController {
                 }
             }
         });
+
+        panelProstoru.setCellFactory(param -> new ListCell<>() {
+            @Override
+            protected void updateItem(Vec vec, boolean empty) {
+                super.updateItem(vec, empty);
+                if (empty || vec == null) {
+                    setText(null);
+                } else {
+                    setText(vec.getNazev());
+                }
+            }
+        });
+
 
     }
 
@@ -91,6 +109,7 @@ public class MainController {
     private void aktualizujSeznamVychodu() {
         seznamVychodu.clear();
         seznamVychodu.addAll(hra.getHerniPlan().getAktualniProstor().getVychody());
+        aktualizujSeznamVeciVProstoru();
     }
 
     private void aktualizujObsahBatohu() {
@@ -99,6 +118,13 @@ public class MainController {
         System.out.println("Aktualizuji obsah batohu: ");
         hra.getHerniPlan().getBatoh().getVeci().forEach(vec -> System.out.println(vec.getNazev()));
     }
+
+    private void aktualizujSeznamVeciVProstoru() {
+        seznamVeciVProstoru.clear();
+        seznamVeciVProstoru.addAll(hra.getHerniPlan().getAktualniProstor().getVeci());
+    }
+
+
 
 
     private void aktualizujPolohuHrace() {
@@ -155,6 +181,6 @@ public class MainController {
     }
 
     public void klikPanelProstoru(MouseEvent mouseEvent) {
-        
+
     }
 }
