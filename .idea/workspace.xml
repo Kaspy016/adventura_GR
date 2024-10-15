@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="Úprava POM pro verzi 1.0.0 a github-ci konfigurace">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/ListCellProstor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/brána.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/sklad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/sklep.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/sál.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/tajemná_místnost.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/temná_chodba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/trezor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/truhla.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/tvrz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/věž.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/zahrada.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/prostory/zbrojnice.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Prostor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Prostor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Batoh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Entity/Batoh.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Prikazy/PrikazSeber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Prikazy/PrikazSeber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +207,7 @@
       <workItem from="1728810403796" duration="7514000" />
       <workItem from="1728843980168" duration="6155000" />
       <workItem from="1728893575986" duration="5041000" />
-      <workItem from="1728984173235" duration="3953000" />
+      <workItem from="1728984173235" duration="6603000" />
     </task>
     <task id="LOCAL-00001" summary="Základ">
       <option name="closed" value="true" />

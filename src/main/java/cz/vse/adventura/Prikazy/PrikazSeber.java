@@ -33,6 +33,7 @@ public class PrikazSeber implements IPrikaz {
         Batoh batoh = plan.getBatoh();
         if (sebranaVec.isPrenositelna() && batoh.pridejVec(sebranaVec)) {
             // pokud se podaří přidat věc do batohu, vrátíme informaci o sebrání
+
             return "Sebral(a) jsi: " + sebranaVec.getNazev();
         } else {
             // pokud není místo v batohu, vrátíme informaci o plném batohu

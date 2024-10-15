@@ -101,4 +101,10 @@ public class Batoh
         }
         return false;
     }
+
+    public Set<Vec> getVeci() {
+        return new HashSet<>(veci);
+    }
+
+
 }

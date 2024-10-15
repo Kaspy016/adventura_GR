@@ -37,6 +37,8 @@ public class MainController {
     private IHra hra = new Hra();
 
     private ObservableList<Prostor> seznamVychodu = FXCollections.observableArrayList();
+    private ObservableList<Vec> seznamVeciVBatohu = FXCollections.observableArrayList();
+
 
     private Map<String, Point2D> souradniceProstoru = new HashMap<>();
 
@@ -46,14 +48,28 @@ public class MainController {
         vystup.setEditable(false);
         Platform.runLater(() -> vstup.requestFocus());
         panelVychodu.setItems(seznamVychodu);
+        panelVeci.setItems(seznamVeciVBatohu);
         hra.getHerniPlan().registruj(ZmenaHry.ZMENA_MISTNOSTI, () -> {
             aktualizujSeznamVychodu();
             aktualizujPolohuHrace();
         });
         hra.registruj(ZmenaHry.KONEC_HRY, () -> aktualizujKonecHry());
         aktualizujSeznamVychodu();
+        aktualizujObsahBatohu();
         vlozSouradnice();
         panelVychodu.setCellFactory(param -> new ListCellProstor());
+        panelVeci.setCellFactory(param -> new ListCell<>() {
+            @Override
+            protected void updateItem(Vec vec, boolean empty) {
+                super.updateItem(vec, empty);
+                if (empty || vec == null) {
+                    setText(null);
+                } else {
+                    setText(vec.getNazev());
+                }
+            }
+        });
+
     }
 
     private void vlozSouradnice() {
@@ -76,6 +92,14 @@ public class MainController {
         seznamVychodu.clear();
         seznamVychodu.addAll(hra.getHerniPlan().getAktualniProstor().getVychody());
     }
+
+    private void aktualizujObsahBatohu() {
+        seznamVeciVBatohu.clear();
+        seznamVeciVBatohu.addAll(hra.getHerniPlan().getBatoh().getVeci());
+        System.out.println("Aktualizuji obsah batohu: ");
+        hra.getHerniPlan().getBatoh().getVeci().forEach(vec -> System.out.println(vec.getNazev()));
+    }
+
 
     private void aktualizujPolohuHrace() {
         String prostor = hra.getHerniPlan().getAktualniProstor().getNazev();
@@ -104,7 +128,7 @@ public class MainController {
         vystup.appendText("> "+ prikaz +"\n");
         String vysledek = hra.zpracujPrikaz(prikaz);
         vystup.appendText(vysledek+"\n\n");
-
+        aktualizujObsahBatohu();
 
     }
     public void ukoncitHru(ActionEvent actionEvent) {
@@ -124,5 +148,13 @@ public class MainController {
         zpracujPrikaz(prikaz);
 
 
+    }
+
+    public void klikPanelVeci(MouseEvent mouseEvent) {
+
+    }
+
+    public void klikPanelProstoru(MouseEvent mouseEvent) {
+        
     }
 }

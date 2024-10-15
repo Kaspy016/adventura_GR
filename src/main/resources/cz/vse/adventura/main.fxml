@@ -25,6 +25,7 @@
   <rowConstraints>
     <RowConstraints vgrow="NEVER" />
       <RowConstraints vgrow="NEVER" />
+      <RowConstraints vgrow="NEVER" />
     <RowConstraints prefHeight="1.0" vgrow="SOMETIMES" />
       <RowConstraints vgrow="NEVER" />
   </rowConstraints>
@@ -37,9 +38,11 @@
               <MenuItem onAction="#aktualizujSeznamVychodu" text="Aktualizuj" />
             </items>
           </Menu>
+          <Menu mnemonicParsing="false" text="Inventář/Prostor">
+          </Menu>       
         </menus>
       </MenuBar>
-      <HBox GridPane.rowIndex="3" GridPane.vgrow="NEVER">
+      <HBox GridPane.rowIndex="4" GridPane.vgrow="NEVER">
          <children>
             <TextField fx:id="vstup" onAction="#odesliVstup" HBox.hgrow="ALWAYS" />
             <Button fx:id="tlacitkoOdesli" mnemonicParsing="false" onAction="#odesliVstup" text="Button">
@@ -52,13 +55,13 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </HBox>
-      <SplitPane dividerPositions="0.4" GridPane.rowIndex="2">
+      <SplitPane dividerPositions="0.4" GridPane.rowIndex="3">
          <items>
             <ListView fx:id="panelVychodu" onMouseClicked="#klikPanelVychodu" />
             <TextArea fx:id="vystup" prefHeight="247.0" prefWidth="396.0" />
          </items>
       </SplitPane>
-      <TitledPane text="Mapa" GridPane.rowIndex="1">
+      <TitledPane text="Mapa" GridPane.rowIndex="2">
          <content>
             <HBox alignment="TOP_CENTER">
                <children>
@@ -78,6 +81,17 @@
                   </Pane>
                </children>
             </HBox>
+         </content>
+      </TitledPane>
+      <TitledPane text="Inventář" GridPane.rowIndex="1">
+         <content>
+            <SplitPane dividerPositions="0.5">
+               <items>
+                  <ListView fx:id="panelVeci" onMouseClicked="#klikPanelVeci" />
+                   <ListView fx:id="panelProstoru" onMouseClicked="#klikPanelProstoru" />
+                  <ListView prefHeight="50.0" prefWidth="200.0" />
+               </items>
+            </SplitPane>
          </content>
       </TitledPane>
    </children>
