@@ -301,5 +301,15 @@ public class Prostor {
         return zlataky;
     }
 
+    public boolean odeberVec(String nazevVeci) {
+        for (Vec vec : veci) {
+            if (vec.getNazev().equalsIgnoreCase(nazevVeci)) {
+                veci.remove(vec);
+                return true; // Úspěšně odebráno
+            }
+        }
+        return false; // Věc nebyla nalezena
+    }
+
 }
 

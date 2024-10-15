@@ -186,18 +186,62 @@ public class MainController {
         String prikaz = PrikazJdi.NAZEV+" " +cil.getNazev();
         System.out.println(prikaz);
         zpracujPrikaz(prikaz);
-
-
     }
 
+    @FXML
     public void klikPanelVeci(MouseEvent mouseEvent) {
-
+        Vec vybranaVec = panelVeci.getSelectionModel().getSelectedItem();
+        if (vybranaVec != null) {
+            if (hra.getHerniPlan().getAktualniProstor().pridejVec(vybranaVec)) {
+                hra.getHerniPlan().getBatoh().odeberVec(vybranaVec.getNazev());
+                aktualizujObsahBatohu();
+                aktualizujSeznamVeciVProstoru();
+                vystup.appendText("Položil(a) jsi: " + vybranaVec.getNazev() + "\n");
+            } else {
+                vystup.appendText("Nemůžeš položit tuto věc zde.\n");
+            }
+        }
     }
 
+    @FXML
     public void klikPanelProstoru(MouseEvent mouseEvent) {
+        Vec vybranaVec = panelProstoru.getSelectionModel().getSelectedItem();
+        if (vybranaVec != null) {
+            // Zkontrolujeme, zda je věc přenositelná
+            if (!vybranaVec.isPrenositelna()) {
+                vystup.appendText("Tuto věc nemůžeš vzít, protože není přenositelná.\n");
+                return;
+            }
 
+            // Pokusíme se přidat věc do batohu
+            if (hra.getHerniPlan().getBatoh().pridejVec(vybranaVec)) {
+                // Odebereme věc z prostoru
+                if (hra.getHerniPlan().getAktualniProstor().odeberVec(vybranaVec.getNazev())) {
+                    aktualizujObsahBatohu();
+                    aktualizujSeznamVeciVProstoru();
+                    vystup.appendText("Sebral(a) jsi: " + vybranaVec.getNazev() + "\n");
+                } else {
+                    vystup.appendText("Nemohu odebrat tuto věc z prostoru.\n");
+                }
+            } else {
+                vystup.appendText("Tvůj inventář je plný, nemůžeš vzít tuto věc.\n");
+            }
+        }
     }
 
+
+    @FXML
     public void klikPanelZlataku(MouseEvent mouseEvent) {
+        if (!panelZlataku.getItems().isEmpty()) {
+            int pocetZlataku = hra.getHerniPlan().getAktualniProstor().getZlataky();
+            if (pocetZlataku > 0) {
+                hra.getHerniPlan().getMesec().pridejZlataky(pocetZlataku);
+                hra.getHerniPlan().getAktualniProstor().setZlataky(0);
+                aktualizujSeznamZlatakuVProstoru();
+                vystup.appendText("Vzal(a) jsi všechny zlaťáky do měšce.\n");
+            } else {
+                vystup.appendText("V této místnosti nejsou žádné zlaťáky.\n");
+            }
+        }
     }
 }

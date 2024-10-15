@@ -61,18 +61,18 @@
             <TextArea fx:id="vystup" prefHeight="247.0" prefWidth="396.0" />
          </items>
       </SplitPane>
-      <TitledPane text="Mapa" GridPane.rowIndex="2">
+      <TitledPane expanded="false" text="Mapa" GridPane.rowIndex="2">
          <content>
             <HBox alignment="TOP_CENTER">
                <children>
                   <Pane>
                      <children>
-                        <ImageView fitHeight="311.0" fitWidth="718.0" layoutX="70.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="311.0" fitWidth="718.0" layoutX="18.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@HerniPlanAdventura.drawio.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="hrac" fitHeight="54.0" fitWidth="99.0" layoutX="354.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="hrac" fitHeight="54.0" fitWidth="99.0" layoutX="211.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@Player(1).png" />
                            </image>
@@ -83,13 +83,13 @@
             </HBox>
          </content>
       </TitledPane>
-      <TitledPane text="Věci" GridPane.rowIndex="1">
+      <TitledPane text="Inventář/Prostor/Zlaťáky" GridPane.rowIndex="1">
          <content>
-            <SplitPane dividerPositions="0.5">
+            <SplitPane dividerPositions="0.33, 0.66">
                <items>
-                  <ListView fx:id="panelVeci" onMouseClicked="#klikPanelVeci" />
-                  <ListView fx:id="panelProstoru" onMouseClicked="#klikPanelProstoru" />
-                  <ListView fx:id="panelZlataku" onMouseClicked="#klikPanelZlataku" />
+                  <ListView fx:id="panelVeci" onMouseClicked="#klikPanelVeci" prefHeight="175.0" />
+                  <ListView fx:id="panelProstoru" onMouseClicked="#klikPanelProstoru" prefHeight="175.0" />
+                  <ListView fx:id="panelZlataku" onMouseClicked="#klikPanelZlataku" prefHeight="175.0" />
                </items>
             </SplitPane>
          </content>
