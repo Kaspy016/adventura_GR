@@ -7,7 +7,8 @@
     <list default="true" id="d92e9a33-fb63-4edb-b515-9aca2f550941" name="Changes" comment="Úprava POM pro verzi 1.0.0 a github-ci konfigurace">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/vse/adventura/logika/HerniPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/Player(1).png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cz/vse/adventura/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +207,7 @@
       <workItem from="1728810403796" duration="7514000" />
       <workItem from="1728843980168" duration="6155000" />
       <workItem from="1728893575986" duration="5041000" />
-      <workItem from="1728984173235" duration="11821000" />
+      <workItem from="1728984173235" duration="14518000" />
     </task>
     <task id="LOCAL-00001" summary="Základ">
       <option name="closed" value="true" />

@@ -34,7 +34,7 @@ public class HerniPlan implements PredmetPozorovani {
 
     // vytvářejí se jednotlivé prostory
     private void zalozProstoryHry() {
-        Prostor trezor = new Prostor("trezor", "trezor",""); //"čas"
+        Prostor trezor = new Prostor("trezor", "trezor","čas"); //"čas"
         Prostor truhla = new Prostor("truhla", "truhla","");
         Prostor tajemnaMistnost = new Prostor("tajemná_místnost","","");
         Prostor tvrz = new Prostor("tvrz", "tvrz","");
@@ -43,8 +43,8 @@ public class HerniPlan implements PredmetPozorovani {
         Prostor sklep = new Prostor("sklep", "sklep","");
         Prostor temnaChodba = new Prostor("temná_chodba", "temná chodba","");
         Prostor zbrojnice = new Prostor("zbrojnice", "zbrojnice","");
-        Prostor sal = new Prostor("sál", "sál",""); //"tma"
-        Prostor sklad = new Prostor("sklad", "sklad",""); //"hora"
+        Prostor sal = new Prostor("sál", "sál","tma"); //"tma"
+        Prostor sklad = new Prostor("sklad", "sklad","hora"); //"hora"
         Prostor brana = new Prostor("brána", "brána","");
 
         // Vytvoření pohyblivých věcí
@@ -79,7 +79,7 @@ public class HerniPlan implements PredmetPozorovani {
         truhla.pridejVec(klicBrana);
         vez.pridejVec(klicTajemnaMistnost);
 
-        /*
+
         //Nastavení temných místností
         temnaChodba.setTemna(true);
 
@@ -91,7 +91,7 @@ public class HerniPlan implements PredmetPozorovani {
         brana.zamknout();
         truhla.zamknout();
         tajemnaMistnost.zamknout();
-        */
+
 
         // Vytvoření nepohyblivých věcí
         Vec hadanka1 = new Vec("hádanka_k_trezoru",false,"Všechno žere, všechno se v něm ztrácí,\n" +

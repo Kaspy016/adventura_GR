@@ -99,18 +99,18 @@ public class MainController {
     }
 
     private void vlozSouradnice() {
-        souradniceProstoru.put("tvrz", new Point2D(354,399));
-        souradniceProstoru.put("sklep", new Point2D(456,399));
-        souradniceProstoru.put("zbrojnice", new Point2D(556,399));
-        souradniceProstoru.put("sklad", new Point2D(631,322));
-        souradniceProstoru.put("tajemná_místnost", new Point2D(457,307));
-        souradniceProstoru.put("zahrada", new Point2D(285,322));
-        souradniceProstoru.put("brána", new Point2D(207,250));
-        souradniceProstoru.put("temná_chodba", new Point2D(354,250));
-        souradniceProstoru.put("sál", new Point2D(354,149));
-        souradniceProstoru.put("truhla", new Point2D(354,46));
-        souradniceProstoru.put("věž", new Point2D(93,399));
-        souradniceProstoru.put("trezor", new Point2D(93,297));
+        souradniceProstoru.put("tvrz", new Point2D(213,250)); //x y
+        souradniceProstoru.put("sklep", new Point2D(282,250)); //x  y
+        souradniceProstoru.put("zbrojnice", new Point2D(351,250)); //x y
+        souradniceProstoru.put("sklad", new Point2D(402,197)); //x y
+        souradniceProstoru.put("tajemná_místnost", new Point2D(282,186)); //x y
+        souradniceProstoru.put("zahrada", new Point2D(161,197)); //x  y
+        souradniceProstoru.put("brána", new Point2D(109,146)); //x y
+        souradniceProstoru.put("temná_chodba", new Point2D(213,146)); //x y
+        souradniceProstoru.put("sál", new Point2D(213,79)); //x y
+        souradniceProstoru.put("truhla", new Point2D(213,8)); //x y
+        souradniceProstoru.put("věž", new Point2D(31,250)); //x y
+        souradniceProstoru.put("trezor", new Point2D(31,177)); //x y
     }
 
     @FXML
@@ -215,7 +215,7 @@ public class MainController {
         Vec vybranaVec = panelProstoru.getSelectionModel().getSelectedItem();
         if (vybranaVec != null) {
             if (!vybranaVec.isPrenositelna()) {
-                vystup.appendText("Tuto věc nemůžeš vzít, protože není přenositelná.\n");
+                vystup.appendText("Hádanku nemůžeš vzít. Přečti si ji a odpověz.\n");
                 return;
             }
 

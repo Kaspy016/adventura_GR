@@ -56,10 +56,10 @@
       <SplitPane dividerPositions="0.4" GridPane.rowIndex="3">
          <items>
             <ListView fx:id="panelVychodu" onMouseClicked="#klikPanelVychodu" />
-            <TextArea fx:id="vystup"/>
+            <TextArea fx:id="vystup" />
          </items>
       </SplitPane>
-      <TitledPane expanded="false" text="Mapa" GridPane.rowIndex="2">
+      <TitledPane text="Mapa" GridPane.rowIndex="2">
          <content>
             <HBox alignment="TOP_CENTER">
                <children>
@@ -70,9 +70,9 @@
                               <Image url="@HerniPlanAdventura.drawio.png" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="hrac" fitHeight="54.0" fitWidth="99.0" layoutX="211.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="hrac" fitHeight="55.0" fitWidth="43.0" layoutX="213.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Player(1).png" />
+                              <Image url="@player(1).jpg" />
                            </image>
                         </ImageView>
                      </children>
