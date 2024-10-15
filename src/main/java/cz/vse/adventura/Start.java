@@ -14,6 +14,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.stage.Screen;
+
 
 
 public class Start extends Application
@@ -38,6 +40,15 @@ public class Start extends Application
         Parent root = loader.load();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
+
+        /*
+        primaryStage.setWidth(Screen.getPrimary().getVisualBounds().getWidth());
+        primaryStage.setHeight(Screen.getPrimary().getVisualBounds().getHeight());
+         */
+
+        // Možnost zapnout maximální velikost a nastavit maximální výšku a šířku
+        primaryStage.setMaximized(true);
+
         primaryStage.show();
         primaryStage.setTitle("Adventura");
     }

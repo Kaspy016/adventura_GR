@@ -16,6 +16,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -116,6 +117,7 @@ public class MainController {
     private void aktualizujSeznamVychodu() {
         seznamVychodu.clear();
         seznamVychodu.addAll(hra.getHerniPlan().getAktualniProstor().getVychody());
+        seznamVychodu.sort(Comparator.comparing(Prostor::getNazev));
         aktualizujSeznamVeciVProstoru();
         aktualizujSeznamZlatakuVProstoru();
     }
@@ -123,6 +125,7 @@ public class MainController {
     private void aktualizujObsahBatohu() {
         seznamVeciVBatohu.clear();
         seznamVeciVBatohu.addAll(hra.getHerniPlan().getBatoh().getVeci());
+        seznamVeciVBatohu.sort(Comparator.comparing(Vec::getNazev));
         System.out.println("Aktualizuji obsah batohu: ");
         hra.getHerniPlan().getBatoh().getVeci().forEach(vec -> System.out.println(vec.getNazev()));
     }
@@ -130,6 +133,7 @@ public class MainController {
     private void aktualizujSeznamVeciVProstoru() {
         seznamVeciVProstoru.clear();
         seznamVeciVProstoru.addAll(hra.getHerniPlan().getAktualniProstor().getVeci());
+        seznamVeciVProstoru.sort(Comparator.comparing(Vec::getNazev));
     }
 
     private void aktualizujSeznamZlatakuVProstoru() {
@@ -155,6 +159,9 @@ public class MainController {
         vstup.setDisable(hra.konecHry());
         tlacitkoOdesli.setDisable(hra.konecHry());
         panelVychodu.setDisable(hra.konecHry());
+        panelVeci.setDisable(hra.konecHry());
+        panelProstoru.setDisable(hra.konecHry());
+        panelZlataku.setDisable(hra.konecHry());
     }
 
     @FXML
@@ -207,7 +214,6 @@ public class MainController {
     public void klikPanelProstoru(MouseEvent mouseEvent) {
         Vec vybranaVec = panelProstoru.getSelectionModel().getSelectedItem();
         if (vybranaVec != null) {
-            // Zkontrolujeme, zda je věc přenositelná
             if (!vybranaVec.isPrenositelna()) {
                 vystup.appendText("Tuto věc nemůžeš vzít, protože není přenositelná.\n");
                 return;
@@ -215,7 +221,6 @@ public class MainController {
 
             // Pokusíme se přidat věc do batohu
             if (hra.getHerniPlan().getBatoh().pridejVec(vybranaVec)) {
-                // Odebereme věc z prostoru
                 if (hra.getHerniPlan().getAktualniProstor().odeberVec(vybranaVec.getNazev())) {
                     aktualizujObsahBatohu();
                     aktualizujSeznamVeciVProstoru();
