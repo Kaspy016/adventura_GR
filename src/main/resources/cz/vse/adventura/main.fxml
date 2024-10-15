@@ -83,13 +83,13 @@
             </HBox>
          </content>
       </TitledPane>
-      <TitledPane text="Inventář" GridPane.rowIndex="1">
+      <TitledPane text="Věci" GridPane.rowIndex="1">
          <content>
             <SplitPane dividerPositions="0.5">
                <items>
                   <ListView fx:id="panelVeci" onMouseClicked="#klikPanelVeci" />
                   <ListView fx:id="panelProstoru" onMouseClicked="#klikPanelProstoru" />
-                  <ListView prefHeight="50.0" prefWidth="200.0" />
+                  <ListView fx:id="panelZlataku" onMouseClicked="#klikPanelZlataku" />
                </items>
             </SplitPane>
          </content>

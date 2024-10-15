@@ -31,12 +31,17 @@ public class MainController {
     @FXML
     private ListView<Vec> panelProstoru;
     @FXML
+    private ListView<String> panelZlataku;
+    @FXML
     private TextArea vystup;
     @FXML
     private Button tlacitkoOdesli;
     @FXML
     private TextField vstup;
     private IHra hra = new Hra();
+
+    private Label seznamZlatakuVProstoru;
+
 
     private ObservableList<Prostor> seznamVychodu = FXCollections.observableArrayList();
     private ObservableList<Vec> seznamVeciVBatohu = FXCollections.observableArrayList();
@@ -88,6 +93,8 @@ public class MainController {
         });
 
 
+
+
     }
 
     private void vlozSouradnice() {
@@ -110,6 +117,7 @@ public class MainController {
         seznamVychodu.clear();
         seznamVychodu.addAll(hra.getHerniPlan().getAktualniProstor().getVychody());
         aktualizujSeznamVeciVProstoru();
+        aktualizujSeznamZlatakuVProstoru();
     }
 
     private void aktualizujObsahBatohu() {
@@ -122,6 +130,12 @@ public class MainController {
     private void aktualizujSeznamVeciVProstoru() {
         seznamVeciVProstoru.clear();
         seznamVeciVProstoru.addAll(hra.getHerniPlan().getAktualniProstor().getVeci());
+    }
+
+    private void aktualizujSeznamZlatakuVProstoru() {
+        panelZlataku.getItems().clear();
+        int pocetZlataku = hra.getHerniPlan().getAktualniProstor().getZlataky();
+        panelZlataku.getItems().add("Počet zlaťáků: " + pocetZlataku);
     }
 
 
@@ -182,5 +196,8 @@ public class MainController {
 
     public void klikPanelProstoru(MouseEvent mouseEvent) {
 
+    }
+
+    public void klikPanelZlataku(MouseEvent mouseEvent) {
     }
 }

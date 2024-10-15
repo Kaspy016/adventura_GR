@@ -297,7 +297,9 @@ public class Prostor {
         return Collections.unmodifiableSet(veci);
     }
 
-
+    public int getPocetZlataku() {
+        return zlataky;
+    }
 
 }
 
